@@ -1,0 +1,67 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url(http://i.imgur.com/7Prf6.jpg);
+  color: #fff;
+  margin: 0;
+}
+
+
+header {
+  padding: 80px 10px;
+  text-align: center;
+}
+
+nav {
+  background-color: #111111f1;
+  left: 0;
+  position: sticky;
+  top: 0;
+}
+#logo {
+  float: left;
+  padding: 20px;
+}
+#navLnks {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.navLnk {
+  background-color: transparent;
+  border: inset 2px transparent;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.navLnk:hover {
+  background-color: #fff2;
+  border: inset 2px #fff3;
+}
+
+
+.section {
+  padding: 20px;
+  text-align: center;
+}
+.section:nth-child(odd) {
+  background-color: #222;
+}
+.section:nth-child(even) {
+  background-color: #111f;
+}
+
+
+footer {
+  background-color: #000d;
+  text-align: center;
+  width: 100%;
+}
+#copy {
+  color: #fffa;
+  padding: 5px 50px;
+  text-align: center;
+}
