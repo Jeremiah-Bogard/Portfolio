@@ -9,6 +9,49 @@ body {
 }
 
 
+#navbar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  left: 0;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+#navbar .navLink {
+  background-color: transparent;
+  border: none;
+  border-radius: 10%;
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+#navbar .navLink::before {
+  background-color: #fff1;
+  content: "";
+  height: 100%;
+  inset: 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transition: width 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+  width: 0;
+}
+#navbar .navLink:hover::before {
+  width: 100%;
+}
+
+
 #projects {
   align-items: stretch;
   align-content: center;
@@ -60,13 +103,28 @@ body {
 
 footer {
   background-color: #000d;
+  display: grid;
+  grid-template-areas:
+    "form form other"
+    "copy copy copy";
+  grid-template-colomns: 37% 37% auto;
+  line-height: 30px;
   text-align: center;
-  margin: 0;
-  padding: 10px;
   width: 100%;
+}
+#contactForm {
+  grid-area: form;
+}
+#other {
+  grid-area: other;
 }
 #copy {
   color: #fffa;
+  grid-area: copy;
   padding: 5px 50px;
   text-align: center;
+}
+footer a {
+  color: white;
+  text-decoration: none;
 }
