@@ -8,6 +8,7 @@
     
   <!-- Add Styling -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
   </head>
   <body>
@@ -20,6 +21,14 @@
         <p>a Backend Web Developer</p>
         
       </section>
+      
+      <nav id="navbar">
+        
+        <a href="#" class="navLink">Link1</a>
+        <a href="#" class="navLink">Link2</a>
+        <a href="#" class="navLink">Link3</a>
+        
+      </nav>
       
       <section id="projects">
         
@@ -43,6 +52,57 @@
           
         </article>
       </section>
+      
+      <footer>
+        
+        <div id="contactForm">
+          
+          <h2>Get In Touch!</h2>
+          
+          <from>
+            
+            <label for="why">Why are you contacting me?</label><br>
+            <select name="why" id="why">
+              <option disabled selected value>Select Reason</option>
+              <option>For hire</option>
+              <option>For a job</option>
+              <option>Other</option>
+            </select>
+            
+            <br><br>
+            
+            <label for="name">What is your name?</label><br>
+            <input type="text" id="name" name="name" placeHolder="Jhon Doe">
+            
+            <br><br>
+            
+            <label for="detail">Please explain in more detail why you would like to talk to me</label><br>
+            <textArea name="detail" id="detail" rows="10" cols="50" placeHolder="Explain your reason for contacting me" style="resize: none;"></textArea>
+          </form>
+          
+        </div>
+        
+        <div id="other">
+          
+          <a href="#">Link1</a><br>
+          <a href="#">Link2</a><br>
+          <a href="#">Link3</a><br><br>
+         
+          <a target="_blank" href="https://github.com/jeremiah-bogard"><i class="fa fa-github fa-2x"></i>
+</a>
+          
+        </div>
+          
+        <div id="copy">
+          <hr>
+          &copy; 2022 Jeremiah Bogard
+        </div>
+        
+      </footer>
+      
+    </main>
+    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     
   </body>
 </html>
