@@ -87,45 +87,34 @@ body {
   background-color: #222;  
   padding: 20px 10%;
 }
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
 
-#skill-list {
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+#skill-grid {
+  display: grid;
+  grid-template-areas:
+    "about graph";
+  grid-template-columns: 75% 25%;
 }
-.skill-img {
-  background-size: cover;
-  flex: 0 0 100px;
-  height: 120px;
-  justify-content: center;
-  margin: 10px;
-  position: relative;
-  text-align: center;
-  width: 100px;
+#skill-about {
+  grid-area: about;
 }
-.skill-text {
-  background-color: #0008;
-  backdrop-filter: blur(5px);
+#skill-graph {
+  grid-area: graph;
+}
+.skill-item {
+  background-color: #fff2;
+  border-radius: 20px;
   color: #fff;
-  height: 100px;
-  justify-content: center;
-  left: 0;
-  padding: 10px;
-  position: absolute;
-  text-align: center;
-  top: -16px;
-  transition: all 0.3s ease-in-out;
-  width: 87px;
+  position: relative;
+  margin: 30px 10px;
 }
-.skill-img:hover .skill-text {
-  opacity: 0;
+.skill-bar {
+  background-color: #070;
+  border-radius: 20px;
+  padding: 5px;
 }
 
 
