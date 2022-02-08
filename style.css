@@ -17,6 +17,7 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   left: 0;
+  min-height: 50px;
   padding: 5px;
   position: sticky;
   top: 0;
@@ -27,6 +28,7 @@ body {
   border: none;
   border-radius: 10%;
   color: #fff;
+  justify-content: center;
   margin-left: 5px;
   margin-right: 5px;
   padding: 10px 30px;
@@ -92,29 +94,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#skill-grid {
+#lang-box {
+  background-color: #0005;
+  border-radius: 10px;
   display: grid;
   grid-template-areas:
-    "about graph";
-  grid-template-columns: 75% 25%;
-}
-#skill-about {
-  grid-area: about;
-}
-#skill-graph {
-  grid-area: graph;
-}
-.skill-item {
-  background-color: #fff2;
-  border-radius: 20px;
-  color: #fff;
+    "left lang right";
+  grid-template-columns: 25% 50% 25%;
+  margin: auto 25%;
   position: relative;
-  margin: 30px 10px;
+  text-align: center;
 }
-.skill-bar {
-  background-color: #070;
-  border-radius: 20px;
-  padding: 5px;
+#lang-box > button {
+  background-color: #0001;
+  border: none;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  height: 100%;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+#lang-box > button:hover {
+  background-color: #fff1;
+  cursor: pointer;
+}
+#left-button {
+  grid-area: left;
+}
+#lang-lang {
+  color: #fff;
+  grid-area: lang;
+  padding: 50px 10px;
+}
+#right-button {
+  grid-area: right;
 }
 
 
