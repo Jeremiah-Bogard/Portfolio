@@ -43,18 +43,18 @@
         <hr>
       </div>
       
-      <section class="sections" id="skills">
+      <section class="sections" id="lang">
         
-        <h2>Skills</h2>
+        <h2>Languages</h2>
            
-        <div id="skill-grid">
-          
-          <div id="skill-about">
-            
-          </div>
-          
-          <div id="skill-graph"></div>
-          
+        <div id="lang-box">
+
+          <button id="left-button" onClick="updateLang('left')">&#8592;</button>
+
+          <h1 id="lang-lang"></h1>
+
+          <button id="right-button" onClick="updateLang('right')">&#8594;</button>
+
         </div>
         
       </section>
@@ -89,7 +89,7 @@
           <from>
             
             <label for="why">Why are you contacting me?</label><br>
-            <select name="why" id="why">
+            <select name="why" id="why" required>
               <option disabled selected value>Select Reason</option>
               <option>For hire</option>
               <option>For a job</option>
@@ -99,7 +99,12 @@
             <br><br>
             
             <label for="name">What is your name?</label><br>
-            <input type="text" id="name" name="name" placeHolder="Jhon Doe">
+            <input type="text" id="name" name="name" placeHolder="Jhon Doe" required>
+
+            <br><br>
+
+            <label for="email">What is your email?</label><br>
+            <input type="email" id="email" name="email" placeHolder="example@gmail.com" required>
             
             <br><br>
             
