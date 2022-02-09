@@ -9,6 +9,24 @@ body {
 }
 
 
+#welcome-section {
+  height: 100vh;
+}
+#welcome-section > #container {
+  background-color: #0007;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  color: #fff;
+  left: 50%;
+  padding: 25vh 50px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;
+}
+
+
 #navbar {
   background-color: #000;
   color: #fff;
