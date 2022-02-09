@@ -3,29 +3,19 @@ AOS.init({
   easing: 'ease-in-out-back',
 });
 
-const langs = [
-  "HTML5",
-  "CSS3",
-  "Javascript",
-];
+var programs = [];
 
-var currLang = 1;
+function updateLang(lang) {
 
-function updateLang(dir) {
+  var programsSection = document.getElementById("projects");
+       programsSection.scrollIntoView();
 
-  let item = document.getElementById("lang-lang");
+  // Display all programs that use the 'lang' language
+  if(lang === "all") {
+    return
+  } else {
 
-  if((dir === "left" && currLang > 0) || (dir === "right" && currLang < langs.length-1)) {
-
-    if(dir === "left") {
-      currLang--;
-    } else {
-      currLang++;
-    }
-    
-    item.innerText = langs[currLang];
-    
   }
   
 }
-updateLang("left");
+updateLang("all");
