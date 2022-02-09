@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,6 +8,13 @@ body {
   color: #fff;
   margin: 0;
   overflow-x: hidden;
+}
+.smallTxt {
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: center;
 }
 
 
@@ -18,12 +27,71 @@ body {
   border-radius: 20px;
   color: #fff;
   left: 50%;
-  padding: 25vh 50px;
+  margin: 2%;
+  padding: 20vh 10px;
   position: absolute;
   text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 75vw;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#container > #greet {
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  font-size: 20px;
+  opacity: 0;
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+#container > #name {
+  animation: scaleIn 1s forwards;
+  color: #ccad00;
+  font-family: 'Great Vibes', cursive;
+  font-size: 75px;
+}
+@keyframes openText {
+  from {
+    width: 0;
+    border: none;
+    opacity: 0;
+  }
+  to {
+    width: 180px;
+    border-left: solid 2px gold;
+    border-right: solid 2px gold;
+    opacity: 1;
+  }
+}
+#container > p {
+  animation: openText 1s forwards;
+  animation-delay: 3s;
+  border: none;
+  font-size: 15px;
+  left: 50%;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+  top: 50px;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  width: 0;
 }
 
 
@@ -113,41 +181,29 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #lang-box {
-  background-color: #0005;
-  border-radius: 10px;
-  display: grid;
-  grid-template-areas:
-    "left lang right";
-  grid-template-columns: 25% 50% 25%;
+  align-content: center;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: auto 25%;
-  position: relative;
   text-align: center;
 }
-#lang-box > button {
-  background-color: #0001;
-  border: none;
+#lang-box > .lang-link {
+  background-color: transparent;
+  border-radius: 10px;
   color: #fff;
-  font-size: 50px;
-  font-weight: bold;
-  height: 100%;
-  outline: none;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  transform: scale(1);
   transition: all 0.3s ease-in-out;
-  width: 100%;
 }
-#lang-box > button:hover {
+#lang-box > .lang-link:hover {
   background-color: #fff1;
-  cursor: pointer;
-}
-#left-button {
-  grid-area: left;
-}
-#lang-lang {
-  color: #fff;
-  grid-area: lang;
-  padding: 50px 10px;
-}
-#right-button {
-  grid-area: right;
+  text-decoration: underline;
+  transform: scale(1.2);
 }
 
 
