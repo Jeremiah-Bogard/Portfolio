@@ -10,6 +10,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Add Scripts -->    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"defer></script>
     
   </head>
   <body>
@@ -27,7 +32,8 @@
       <section id="welcome-section">
         
         <div id="container">
-          <h1>Hello I am Jeremiah Bogard</h1>
+          <h1 id="greet">Hello, my name is<h1>
+          <h1 id="name">Jeremiah Bogard</h1>
           <p>A Full Stack Web Developer</p>
         </div>
         
@@ -48,14 +54,13 @@
       <section class="sections" id="lang">
         
         <h2>Languages</h2>
+        <p class="smallTxt">Languages I know and use frequently</p>
            
         <div id="lang-box">
 
-          <button id="left-button" onClick="updateLang('left')">&#8592;</button>
-
-          <h1 id="lang-lang"></h1>
-
-          <button id="right-button" onClick="updateLang('right')">&#8594;</button>
+          <a class="lang-link" href="javascript:updateLang('html')">HTML5</a>
+          <a class="lang-link" href="javascript:updateLang('css')">CSS3</a>
+          <a class="lang-link" href="javascript:updateLang('js')">Javascript</a>
 
         </div>
         
@@ -135,12 +140,6 @@
       </footer>
       
     </main>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script src="script.js"></script>
-
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     
   </body>
 </html>
