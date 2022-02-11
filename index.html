@@ -77,53 +77,54 @@
       </section>
       
       <footer>
-        
-        <div id="contactForm">
           
-          <h2>Get In Touch!</h2>
-          
-          <from>
-            
-            <label for="why">Why are you contacting me?</label><br>
-            <select name="why" id="why" required>
-              <option disabled selected value>Select Reason</option>
-              <option>For hire</option>
-              <option>For a job</option>
-              <option>Other</option>
-            </select>
-            
-            <br><br>
-            
-            <label for="name">What is your name?</label><br>
-            <input type="text" id="name" name="name" placeHolder="Jhon Doe" required>
+        <form id="gitForm">
 
-            <br><br>
+          <h1>Get In Touch!</h1><br>
+            
+          <label for="why">Why are you contacting me?</label><br>
+          <select name="why" id="why" required>
+            <option disabled selected value>Select A Reason</option>
+            <option>For hire</option>
+            <option>For a job</option>
+            <option>Other</option>
+          </select>
+            
+          <br><br>
+            
+          <label for="name">What is your name?</label><br>
+          <input type="text" id="name" name="name" placeHolder="Jhon Doe" required>
+ 
+          <br><br>
 
-            <label for="email">What is your email?</label><br>
-            <input type="email" id="email" name="email" placeHolder="example@gmail.com" required>
-            
-            <br><br>
-            
-            <label for="detail">Please explain in more detail why you would like to talk to me</label><br>
-            <textArea name="detail" id="detail" rows="10" cols="50" placeHolder="Explain your reason for contacting me" style="resize: none;"></textArea>
-          </form>
-          
-        </div>
+          <label for="email">What is your email?</label><br>
+          <input type="email" id="email" name="email" placeHolder="example@gmail.com" required>
+
+          <br><br>
+   
+          <label>Please explain in more detail why you would like to talk to me</label><br>
+          <textArea name="detail" id="detail" rows="10" cols="50" placeHolder="Explain your reason for contacting me" style="resize: none;"></textArea>       
+
+          <br><br>
+
+          <input id="submitBttn" type="submit" value="Submit">
         
-        <div id="other">
-          
-          <a href="#">Link1</a><br>
-          <a href="#">Link2</a><br>
-          <a href="#">Link3</a><br><br>
-         
-          <a id="profile-link" target="_blank" href="https://github.com/jeremiah-bogard"><i class="fa fa-github"> Github</i>
-</a>
-          
-        </div>
+        </form>
           
         <div id="copy">
           <hr>
           &copy; 2022 Jeremiah Bogard
+
+          <div id="other">
+          
+            <a href="#about">About</a>
+            <a href="#lang">Skills</a>
+            <a href="#projects">Programs</a>
+         
+            <a id="profile-link" target="_blank" href="https://github.com/jeremiah-bogard"><i class="fa fa-github"> Github</i></a>
+          
+          </div>
+
         </div>
         
       </footer>
