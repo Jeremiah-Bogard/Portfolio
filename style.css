@@ -45,7 +45,7 @@ body {
 }
 #container > #greet {
   animation: fadeIn 1s forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
   font-size: 20px;
   opacity: 0;
 }
@@ -61,9 +61,11 @@ body {
 }
 #container > #name {
   animation: scaleIn 1s forwards;
+  animation-delay: 1s;
   color: #ccad00;
   font-family: 'Great Vibes', cursive;
   font-size: 75px;
+  transform: scale(0);
 }
 @keyframes openText {
   from {
@@ -124,7 +126,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 #navbar .navLink::before {
-  background-color: #fff1;
+  background-color: #fff2;
   content: "";
   height: 100%;
   inset: 0;
@@ -140,23 +142,6 @@ body {
 }
 
 
-@keyframes borderChange {
-  0% {
-    border-color: #0000;
-  }
-  25% {
-    border-color: #fffd;
-  }
-  50% {
-    border-color: #f00;
-  }
-  75% {
-    border-color: #000;
-  }
-  100% {
-    border-color: #0000;
-  }
-}
 .section-divide {
   background-color: #222;
   height: 20px;
@@ -164,7 +149,8 @@ body {
   padding: 1px 5vw;
 }
 .section-divide hr {
-  animation: borderChange 25s infinite;
+  border-color: #998200;
+  border-width: 2px;
 }
 .sections {
   background-color: #222;  
@@ -252,20 +238,58 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
   background-color: #000d;
-  display: grid;
-  grid-template-areas:
-    "form form other"
-    "copy copy copy";
-  grid-template-colomns: 37% 37% auto;
   line-height: 30px;
+  padding: 1px;
   text-align: center;
   width: 100%;
 }
-#contactForm {
-  grid-area: form;
+form > h1 {
+  color: #ccad00;
+}
+form > label {
+  color: #b39800;
+  font-size: 15px;
+}
+form > input,
+form > select,
+form > textArea {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px #ccad00;
+  color: #fff9;
+  font-size: 15px;
+  margin-top: 0;
+  outline: none;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+form > input:focus,
+form > select:focus,
+form > textArea:focus {
+  background-color: #fff1;
+  color: #fff;
+  margin-top: 10px;
+}
+option {
+  background-color: #222;
+  color: #fff;
+}
+form > #submitBttn {
+  background-color: transparent;
+  border: solid 3px #806c00;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 50px;
+  transition: all 0.3s ease-in-out;
+}
+form > #submitBttn:hover {
+  background-color: #ccad00;
+  color: #222;
+  cursor: pointer;
 }
 #other {
-  grid-area: other;
+  float: right;
 }
 #copy {
   color: #fffa;
@@ -275,6 +299,7 @@ footer {
 }
 footer a {
   color: white;
+  margin: 10px;
   position: relative;
   text-decoration: none;
 }
