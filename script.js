@@ -53,3 +53,9 @@ function updateLang(lang) {
   
 }
 updateLang("all");
+
+
+document.getElementById("gitForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Function not avaible");
+});
