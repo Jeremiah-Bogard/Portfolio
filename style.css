@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 html {
+  font-size: 10px;
   scroll-behavior: smooth;
 }
 body {
@@ -9,13 +10,24 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-.smallTxt {
-  font-size: 12px;
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-  text-align: center;
+h1 {
+  font-size: 3.2em;
 }
+h2 {
+  font-size: 2.4em;
+}
+h3 {
+  font-size: 1.9em;
+}
+p,
+#copy {
+  font-size: 1.6em;
+}
+small,
+img {
+  font-size: 1.2em;
+}
+
 
 
 #welcome-section {
@@ -46,7 +58,7 @@ body {
 #container > #greet {
   animation: fadeIn 1s forwards;
   animation-delay: 2s;
-  font-size: 20px;
+  font-size: 2em;
   opacity: 0;
 }
 @keyframes scaleIn {
@@ -64,7 +76,7 @@ body {
   animation-delay: 1s;
   color: #ccad00;
   font-family: 'Great Vibes', cursive;
-  font-size: 75px;
+  font-size: 7.5em;
   transform: scale(0);
 }
 @keyframes openText {
@@ -84,7 +96,7 @@ body {
   animation: openText 1s forwards;
   animation-delay: 3s;
   border: none;
-  font-size: 15px;
+  font-size: 1.5em;
   left: 50%;
   overflow: hidden;
   padding: 10px 0;
@@ -116,6 +128,7 @@ body {
   border: none;
   border-radius: 10%;
   color: #fff;
+  font-size: 2em;
   justify-content: center;
   margin-left: 5px;
   margin-right: 5px;
@@ -168,23 +181,31 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto 25%;
+  margin: auto 5%;
   text-align: center;
 }
-#lang-box > .lang-link {
-  background-color: transparent;
+#lang-box .lang-tile {
+  background-color: #333;
+  border: solid 1px #ccad00;
   border-radius: 10px;
-  color: #fff;
+  flex: 0 0 200px;
   margin: 10px;
-  padding: 10px;
-  text-decoration: none;
-  transform: scale(1);
   transition: all 0.3s ease-in-out;
+  width: 200px;
 }
-#lang-box > .lang-link:hover {
-  background-color: #fff1;
+#lang-box .lang-tile:hover {
+  box-shadow: 0 0 20px #ccad00;
+  transform: scale(1.1);
+}
+.lang-tile img {
+  width: 200px;
+}
+.lang-tile a {
+  color: #fff;
+  text-decoration: none;
+}
+.lang-tile a:hover {
   text-decoration: underline;
-  transform: scale(1.2);
 }
 
 
@@ -196,43 +217,34 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   justify-content: center;
 }
-.project-tile {
-  border: solid 1px #fff;
-  border-radius: 15px;
-  height: 200px;
+#projects-contain .project-tile {
+  background-color: #333;
+  border: solid 1px #ccad00;
+  border-radius: 10px;
+  flex: 0 0 200px;
   margin: 10px;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
+  transition: all 0.3s ease-in-out;
   width: 200px;
 }
-.project-img {
-  display: block;
-  height: 100%;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
-}
-.project-tile:hover .project-img {
-  filter: blur(5px);
+.project-tile:hover {
+  box-shadow: 0 0 20px #ccad00;
   transform: scale(1.1);
 }
-.project-info {
-  align-items: center;
-  background-color: #0008;
+.project-tile a {
   color: #fff;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  opacity: 0;
-  top: 100%;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
-.project-tile:hover .project-info {
-  opacity: 1;
-  top: -16px;
+.project-tile h2:hover {
+  text-decoration: underline;
+}
+.project-tile img {
+  border-radius: 10px 10px 0 0;
+  height: 150px;
+  width: 200px;
+}
+.project-tile p {
+  padding: 5px;
+  text-align: center;
 }
 
 
@@ -248,7 +260,7 @@ form > h1 {
 }
 form > label {
   color: #b39800;
-  font-size: 15px;
+  font-size: 1.5em;
 }
 form > input,
 form > select,
@@ -257,7 +269,7 @@ form > textArea {
   border: none;
   border-bottom: solid 2px #ccad00;
   color: #fff9;
-  font-size: 15px;
+  font-size: 1.5em;
   margin-top: 0;
   outline: none;
   padding: 5px;
@@ -279,7 +291,7 @@ form > #submitBttn {
   border: solid 3px #806c00;
   border-radius: 10px;
   color: #fff;
-  font-size: 20px;
+  font-size: 2em;
   padding: 10px 50px;
   transition: all 0.3s ease-in-out;
 }
@@ -318,7 +330,4 @@ footer a::before {
 footer a:hover::before {
   background-color: #fa0;
   width: 100%;
-}
-#profile-link {
-  font-size: 20px;
 }
