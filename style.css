@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(http://i.imgur.com/7Prf6.jpg);
+  <!--background-image: url(http://i.imgur.com/7Prf6.jpg);-->
   color: #fff;
   margin: 0;
   overflow-x: hidden;
@@ -28,84 +28,17 @@ img {
   font-size: 1.2em;
 }
 
-
+.my-logo {
+  border-radius: 100%;
+  width: 50px;
+}
 
 #welcome-section {
+  background-image: url(Logo/JeremiahBogard.gif);
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: center;
   height: 100vh;
-}
-#welcome-section > #container {
-  background-color: #0007;
-  backdrop-filter: blur(2px);
-  border-radius: 20px;
-  color: #fff;
-  left: 50%;
-  margin: 2%;
-  padding: 10vh 10px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 75vw;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#container > #greet {
-  animation: fadeIn 1s forwards;
-  animation-delay: 2s;
-  font-size: 2em;
-  opacity: 0;
-}
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-#container > #name {
-  animation: scaleIn 1s forwards;
-  animation-delay: 1s;
-  color: #ccad00;
-  font-family: 'Great Vibes', cursive;
-  font-size: 7.5em;
-  transform: scale(0);
-}
-@keyframes openText {
-  from {
-    width: 0;
-    border: none;
-    opacity: 0;
-  }
-  to {
-    width: 180px;
-    border-left: solid 2px gold;
-    border-right: solid 2px gold;
-    opacity: 1;
-  }
-}
-#container > p {
-  animation: openText 1s forwards;
-  animation-delay: 3s;
-  border: none;
-  font-size: 1.5em;
-  left: 50%;
-  overflow: hidden;
-  padding: 10px 0;
-  position: relative;
-  text-align: center;
-  top: 10vh;
-  transform: translate(-50%, 0);
-  white-space: nowrap;
-  width: 0;
 }
 
 
