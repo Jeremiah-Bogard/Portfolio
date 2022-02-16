@@ -27,6 +27,20 @@ img {
   font-size: 1.2em;
 }
 
+.flex {
+  align-items: stretch;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 320) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
 .my-logo {
   border-radius: 100%;
   width: 50px;
@@ -99,7 +113,7 @@ img {
 }
 .sections {
   background-color: #222;  
-  padding: 20px 10%;
+  padding: 20px 2%;
 }
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
@@ -107,12 +121,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #lang-box {
-  align-content: center;
-  align-items: stretch;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   margin: auto 5%;
   text-align: center;
 }
@@ -121,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   border: solid 1px #ccad00;
   border-radius: 10px;
   flex: 0 0 200px;
-  margin: 10px;
+  margin: 5px;
   transition: all 0.3s ease-in-out;
   width: 200px;
 }
@@ -141,20 +149,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#projects-contain {
-  align-items: stretch;
-  align-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 #projects-contain .project-tile {
   background-color: #333;
   border: solid 1px #ccad00;
   border-radius: 10px;
   flex: 0 0 200px;
-  margin: 10px;
+  margin: 5px;
   transition: all 0.3s ease-in-out;
   width: 200px;
 }
@@ -232,9 +232,6 @@ form > #submitBttn:hover {
   color: #222;
   cursor: pointer;
 }
-#other {
-  float: right;
-}
 #copy {
   color: #fffa;
   grid-area: copy;
@@ -247,19 +244,6 @@ footer a {
   position: relative;
   text-decoration: none;
 }
-footer a::before {
-  background-color: #fff;
-  content: "";
-  height: 3px;
-  inset: 0;
-  left: 50%;
-  position: absolute;
-  top: 100%;
-  transition: all 0.5s ease-in-out;
-  transform: translate(-50%, -50%);
-  width: 0;
-}
-footer a:hover::before {
-  background-color: #fa0;
-  width: 100%;
+footer a:hover {
+  text-decoration: underline;
 }
