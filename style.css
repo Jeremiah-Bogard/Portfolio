@@ -5,7 +5,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  <!--background-image: url(http://i.imgur.com/7Prf6.jpg);-->
   color: #fff;
   margin: 0;
   overflow-x: hidden;
@@ -182,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 footer {
-  background-color: #000d;
+  background-color: #000;
   line-height: 30px;
   padding: 1px;
   text-align: center;
