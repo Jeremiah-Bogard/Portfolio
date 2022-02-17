@@ -88,7 +88,7 @@ function showLangs() {
 showLangs();
 
 
-document.getElementById("gitForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Function not avaible");
-});
+// document.getElementById("gitForm").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   alert("Function not avaible");
+// });
