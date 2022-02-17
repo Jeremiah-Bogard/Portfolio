@@ -9,6 +9,11 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+@media (max-width: 400) {
+  html {
+    font-size: 5px;
+  }
+}
 h1 {
   font-size: 3.2em;
 }
@@ -34,11 +39,6 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-@media (max-width: 320) {
-  .flex {
-    flex-direction: column;
-  }
 }
 
 .my-logo {
