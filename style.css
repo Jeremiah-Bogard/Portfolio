@@ -187,50 +187,17 @@ footer {
   text-align: center;
   width: 100%;
 }
-form > h1 {
-  color: #ccad00;
+iframe {
+  width: 400px;
 }
-form > label {
-  color: #b39800;
-  font-size: 1.5em;
-}
-form > input,
-form > select,
-form > textArea {
-  background-color: transparent;
-  border: none;
-  border-bottom: solid 2px #ccad00;
-  color: #fff9;
-  font-size: 1.5em;
-  margin-top: 0;
-  outline: none;
-  padding: 5px;
-  transition: all 0.3s ease-in-out;
-}
-form > input:focus,
-form > select:focus,
-form > textArea:focus {
-  background-color: #fff1;
-  color: #fff;
-  margin-top: 10px;
+@media (max-width: 400) {
+  iframe {
+    width: 300px;
+  }
 }
 option {
   background-color: #222;
   color: #fff;
-}
-form > #submitBttn {
-  background-color: transparent;
-  border: solid 3px #806c00;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 2em;
-  padding: 10px 50px;
-  transition: all 0.3s ease-in-out;
-}
-form > #submitBttn:hover {
-  background-color: #ccad00;
-  color: #222;
-  cursor: pointer;
 }
 #copy {
   color: #fffa;
