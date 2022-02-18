@@ -192,11 +192,6 @@ iframe {
 }
 @media (max-width: 400) {
   iframe {
-    width: 300px;
-  }
-}
-@media (max-width: 300) {
-  iframe {
     width: 200px;
   }
 }
