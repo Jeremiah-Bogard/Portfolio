@@ -42,16 +42,19 @@ img {
 }
 
 .my-logo {
-  border-radius: 100%;
   width: 50px;
 }
 
 #welcome-section {
-  background-image: url(Logo/JeremiahBogard.gif);
+  background-image: url(./Logo/JeremiahBogard.gif);
   background-repeat: no-repeat;
   background-size: fit;
   background-position: center;
   height: 100vh;
+  text-align: center;
+}
+#welcome-section h1 {
+  display: none;
 }
 
 
@@ -117,6 +120,22 @@ img {
 }
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
+}
+
+
+#about {
+  text-align: center;
+  max-height: 250px;
+  overflow: scroll;
+}
+#about a {
+  color: #fff;
+  font-size: 1.6em;
+  font-style: italic;
+  text-decoration: none;
+}
+#about a:hover {
+  text-decoration: underline;
 }
 
 
