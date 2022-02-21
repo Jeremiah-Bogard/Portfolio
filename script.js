@@ -9,16 +9,17 @@ var programs = [
   ["https://jeremiah-bogard.github.io/Tic-Tac-Toe", "Your classic Tic Tac Toe game!!! A Player vs Player game. Created using HTML, CSS, and mostly Javascript.", "TicTacToe22.png", ["HTML5", "CSS3", "JavaScript"]],
   ["https://jeremiah-bogard.github.io/Technical-Documentation", "A small Introduction to HTML. Made for responsive layout project from Free Code Camp with HTML, CSS, and Javascript.", "TechnicalDocs.png", ["HTML5", "CSS3", "JavaScript"]],
   ["https://jeremiah-bogard.github.io/Vroom-Shipping", "A landing page for Vroom Shipping which turns out to be a real company. It was created mostly for responsiveness by combining some HTML and CSS", "VroomShipping.png", ["HTML5", "CSS3"]],
-  ["https://jeremiah-bogard.github.io/Portfolio", "My portfolio (this website) where you can find information about me and see some of my programs. Created using HTML, CSS, and Javascript.", "portfolio.png", ["HTML5", "CSS3", "JavaScript"]],
+  ["https://jeremiah-bogard.github.io/Portfolio", "My portfolio (this website) where you can find information about me and see some of my programs. Created using HTML, CSS, and Javascript.", "Portfolio22.png", ["HTML5", "CSS3", "JavaScript"]],
 ];
 var langs = [
 /*
   ["NAME", "LOGO IMAGE LINK", "MY SKILLS OF THIS LANGUAGE", "EXAMPLE"]
 */
 
-  ["HTML5", "html5.png", "I know this language extremely well and have been creating tons of websites with it.", "https://jeremiah-bogard-github-io/Portfolio"],
-  ["CSS3", "css3.png", "I've been using this language and know it fairly well. I am still learning how to make a website responsive by using CSS.", "https://jeremiah-bogard-github-io/Portfolio"],
-  ["JavaScript", "javascript.png", "A very useful language that I use for changing parts of a webpage. I am still learning all of the uses for javascript.", "https://jeremiah-bogard-github-io/Portfolio"],
+  ["HTML5", "html5.png", "I know this language extremely well and have been creating tons of websites with it.", "https://jeremiah-bogard.github.io/Portfolio"],
+  ["CSS3", "css3.png", "I've been using this language and know it fairly well. I am still learning how to make a website responsive by using CSS.", "https://jeremiah-bogard.github.io/Portfolio"],
+  ["JavaScript", "javascript.png", "A very useful language that I use for changing parts of a webpage. I am still learning all of the uses for javascript.", "https://jeremiah-bogard.github.io/Portfolio"],
+  ["Python", "python.png", "I become quite skilled at this language. I've used it for creating command line games and sending information accross the internet.", "https://jeremiah-bogard.github.io/Portfolio"]
 ];
 
 for(let i = 0; i < programs.length; i++) {
