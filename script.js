@@ -88,8 +88,17 @@ function showLangs() {
 }
 showLangs();
 
+const musicBttn = document.getElementById('music')
+const musicAudio = document.getElementById('musicAudio')
+var musicIs = "Off";
 
-// document.getElementById("gitForm").addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   alert("Function not avaible");
-// });
+musicBttn.addEventListener('click', () => {
+  if(musicIs === "Off") {
+    musicAudio.play();
+    musicIs = "On";
+  } else {
+    musicAudio.pause();
+    musicIs = "Off";
+  }
+  document.getElementById('musicOnOff').innerText = musicIs;
+})
