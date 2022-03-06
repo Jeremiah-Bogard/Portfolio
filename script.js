@@ -1,92 +1,62 @@
-var container = document.getElementById("projects-contain");
+var program_container = document.getElementById("projects-contain");
+var language_container = document.getElementById("lang-box");
+var programs_section = document.getElementById("projects");
 
 AOS.init({
   duration: 1200,
   easing: 'ease-in-out-back',
 });
 
-var programs = [
-  ["https://jeremiah-bogard.github.io/Tic-Tac-Toe", "Your classic Tic Tac Toe game!!! A Player vs Player game. Created using HTML, CSS, and mostly Javascript.", "TicTacToe22.png", ["HTML5", "CSS3", "JavaScript"]],
-  ["https://jeremiah-bogard.github.io/Technical-Documentation", "A small Introduction to HTML. Made for responsive layout project from Free Code Camp with HTML, CSS, and Javascript.", "TechnicalDocs.png", ["HTML5", "CSS3", "JavaScript"]],
-  ["https://jeremiah-bogard.github.io/Vroom-Shipping", "A landing page for Vroom Shipping which turns out to be a real company. It was created mostly for responsiveness by combining some HTML and CSS", "VroomShipping.png", ["HTML5", "CSS3"]],
-  ["https://jeremiah-bogard.github.io/Portfolio", "My portfolio (this website) where you can find information about me and see some of my programs. Created using HTML, CSS, and Javascript.", "Portfolio22.png", ["HTML5", "CSS3", "JavaScript"]],
-];
-var langs = [
-/*
-  ["NAME", "LOGO IMAGE LINK", "MY SKILLS OF THIS LANGUAGE", "EXAMPLE"]
-*/
+function programs(data) {
+  for(let i = 0; i < data.length; i++) {
+    var tile = document.createElement("div")
+    tile.classList.add("project-tile");
+    tile.innerHTML = `<a target='_blank' href='${data[i].link}'><img class='project-img' src='program_images/${data[i].image_name}' alt='Program Image'><h2>${data[i].name}</h2></a><p class='project-info'>${data[i].description}</p>`;
+    program_container.appendChild(tile);
+  }
+}
+function languages(data) {
+  for(let i = 0; i < data.length; i++) {
+    var tile = document.createElement("div");
+   	tile.classList.add("lang-tile");
+    tile.innerHTML = `<img src='language_logos/${data[i].image_name}' alt='Language Logo'><a href='javascript:updateLanguage("${data[i].name}")'><h2>${data[i].name}</h2></a><p>${data[i].description}</p><a href='${data[i].example_link}' target='_blank'><small>Example: ${data[i].example_name}</small></a>`;
+    language_container.append(tile);
+  }
+}
 
-  ["HTML5", "html5.png", "I know this language extremely well and have been creating tons of websites with it.", "https://jeremiah-bogard.github.io/Portfolio"],
-  ["CSS3", "css3.png", "I've been using this language and know it fairly well. I am still learning how to make a website responsive by using CSS.", "https://jeremiah-bogard.github.io/Portfolio"],
-  ["JavaScript", "javascript.png", "A very useful language that I use for changing parts of a webpage. I am still learning all of the uses for javascript.", "https://jeremiah-bogard.github.io/Portfolio"],
-  ["Python", "python.png", "I become quite skilled at this language. I've used it for creating command line games and sending information accross the internet.", "https://jeremiah-bogard.github.io/Portfolio"]
-];
+fetch("api.json")
+.then((res) => res.json())
+.then ((data) => {
+  programs(data.programs);
+  languages(data.languages);
+}).catch((err) => {
+  console.error(err);
+});
 
-for(let i = 0; i < programs.length; i++) {
-
-    var linkSplit = programs[i][0].split("/");
-    var title = linkSplit[linkSplit.length-1];
-
-    var tile = document.createElement("article");
-        tile.classList.add("project-tile");
-
-	tile.innerHTML = `<a target='_blank' href='${programs[i][0]}'><img class='project-img' src='program_images/${programs[i][2]}' alt='Program Image'><h2>${title}</h2></a><p class='project-info'>${programs[i][1]}</p>`;
-
-	container.append(tile);
-} 
-
-function updateLang(lang) {
-
-  var programsSection = document.getElementById("projects");
-      programsSection.scrollIntoView();
-
-  // Display all programs that use the 'lang' language
-  if(lang === "all") {
-    return
-  } else {
-
-    container.innerHTML = "";
-
-    for(let i = 0; i < programs.length; i++) {
-      for(let j = 0; j < programs[i][3].length; j++) {
-
-	if(programs[i][3][j].toLowerCase() === lang.toLowerCase()) {
-	  
-          var tile = document.createElement("article");
-              tile.classList.add("project-tile");
-	      tile.innerHTML = `<a target='_blank' href='${programs[i][0]}'><img class='project-img' src='program_images/${programs[i][2]}' alt='Program Image'></a><p class='project-info'>${programs[i][1]}</p>`;
-
-	  container.append(tile);
+function updateLanguage(to) {
+  if(to === "all") return;
+  fetch("api.json")
+  .then(res => res.json())
+  .then((data) => {
+    var programs_list = [];
+    for(let i = 0; i < data.programs.length; i++) {
+      for(let j = 0; j < data.programs[i].languages.length; j++) {
+        var newData = data.programs[i].languages[j];
+        if(newData.toLowerCase() === to.toLowerCase()) {
+          programs_list.push(data.programs[i]);
+          break;
         }
-
       }
     }
-
-  }
-  
+    program_container.innerHTML = "";
+    if(programs_list.length === 0) {
+      program_container.innerHTML = `<p>I have not published any programs with the language ${to}</p>`;
+    } else {
+      programs(programs_list);
+    }
+    programs_section.scrollIntoView();
+  }).catch((err) => console.error(err));
 }
-updateLang("all");
-
-
-function showLangs() {
-
-  for(let i = 0; i < langs.length; i++) {
-
-    var linkSplit = langs[i][3].split("/");
-    var example = linkSplit[linkSplit.length-1];
-    
-    var container = document.getElementById("lang-box");
-    
-    var tile = document.createElement("article");
-	tile.classList.add("lang-tile");
-        tile.innerHTML = `<img src='language_logos/${langs[i][1]}' alt='Language Logo'><a href='javascript:updateLang("${langs[i][0]}")'><h2>${langs[i][0]}</h2></a><p>${langs[i][2]}</p><a href='${langs[i][3]}' target='_blank'><small>Example: ${example}</small></a>`;
-
-    container.append(tile);
-
-  }
-
-}
-showLangs();
 
 const musicBttn = document.getElementById('music')
 const musicAudio = document.getElementById('musicAudio')

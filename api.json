@@ -1,0 +1,62 @@
+{
+    "languages": [
+        {
+            "name": "HTML5",
+            "image_name": "html5.png",
+            "description": "I know this language extremely well and have been creating tons of websites with it.",
+            "example_link": "https://jeremiah-bogard.github.io/Portfolio",
+            "example_name": "Portfolio"
+        },
+        {
+            "name": "CSS3",
+            "image_name": "css3.png",
+            "description": "I've been using this language and know it fairly well. I am still learning how to make a website responsive by using CSS.",
+            "example_link": "https://jeremiah-bogard.github.io/Portfolio",
+            "example_name": "Portfolio"
+        },
+        {
+            "name": "JavaScript",
+            "image_name": "javascript.png",
+            "description": "A very useful language that I use for changing parts of a webpage. I am still learning all of the uses for javascript.",
+            "example_link": "https://jeremiah-bogard.github.io/Portfolio",
+            "example_name": "Portfolio"
+        },
+        {
+            "name": "Python",
+            "image_name": "python.png",
+            "description": "I become quite skilled at this language. I've used it for creating command line games and sending information across the internet.",
+            "example_link": "",
+            "example_name": "None at this time."
+        }
+    ],
+    "programs": [
+        {
+            "name": "Tic-Tac-Toe",
+            "link": "https://jeremiah-bogard.github.io/Tic-Tac-Toe",
+            "description": "Your classic Tic Tac Toe game!!! A Player vs Player game. Created using HTML, CSS, and mostly Javascript.",
+            "image_name": "TicTacToe22.png",
+            "languages": ["HTML5", "CSS3", "JavaScript"]
+        },
+        {
+            "name": "Technical Documentation",
+            "link": "https://jeremiah-bogard.github.io/Technical-Documentation",
+            "description": "A small Introduction to HTML. Made for responsive layout project from Free Code Camp with HTML, CSS, and Javascript.",
+            "image_name": "TechnicalDocs.png",
+            "languages": ["HTML5", "CSS3", "JavaScript"]
+        },
+        {
+            "name": "Vroom Shipping",
+            "link": "https://jeremiah-bogard.github.io/Vroom-Shipping",
+            "description": "A landing page for Vroom Shipping which turns out to be a real company. It was created mostly for responsiveness by combining some HTML and CSS",
+            "image_name": "VroomShipping.png",
+            "languages": ["HTML5", "CSS3"]
+        },
+        {
+            "name": "Portfolio",
+            "link": "https://jeremiah-bogard.github.io/Portfolio",
+            "description": "My portfolio (this website) where you can find information about me and see some of my programs. Created using HTML, CSS, and Javascript.",
+            "image_name": "Portfolio22.png",
+            "languages": ["HTML5", "CSS3", "JavaScript"]
+        }
+    ]
+}
