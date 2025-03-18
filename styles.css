@@ -1,0 +1,231 @@
+:root {
+    --primary: #fff;
+    --secondary: #000;
+    --primary-text: #000;
+    --secondary-text: #fff;
+    --accent: #0083ce;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+body {
+    background-color: var(--primary);
+    color: var(--primary-text);
+    font-family: 'Times New Roman', Times, serif;
+}
+#header {
+    background-image: url("./images/headerBack.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--secondary-text);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+#title {
+    background-color: #0000009d;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 50px;
+    min-width: 40dvw;
+    line-height: 40px;
+}
+#title h1 {
+    font-family: cursive;
+    font-size: 3.7em;
+}
+#title p {
+    letter-spacing: 4px;
+    padding-top: 50px;
+}
+@keyframes scaleButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#explore {
+    animation: scaleButton 1s infinite;
+    background: none;
+    border: none;
+    position: absolute;
+    padding: 10px;
+    color: #fff;
+    font-size: 3em;
+    bottom: 50px;
+}
+#explore:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+}
+.downloadResume,
+.viewMoreLink {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.downloadResume:hover,
+.viewMoreLink:hover {
+    text-decoration: underline;
+}
+#workResumeLink {
+    margin-top: 20px;
+}
+section {
+    padding: 15px;
+}
+section h2, section h1 {
+    text-align: center;
+}
+#aboutSection p {
+    text-indent: 2em;
+}
+#aboutSection h1 {
+    padding: 15px;
+}
+#aboutText p {
+    padding: 10px;
+    line-height: 25px;
+}
+#profileImage {
+    border-radius: 100px;
+    float: left;
+    margin: 15px;
+    max-width: 300px;
+    min-width: 150px;
+}
+#skillsAndCerts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#skillsAndCerts ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px;
+    line-height: 30px;
+}
+#projectsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000002c;
+    color: #000;
+}
+#projects {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+    margin-top: 30px;
+}
+.gridRowBorder {
+    border-bottom: 2px solid #fff;
+    grid-column: 2 / span 6;
+}
+.projectWrapper:first-child {
+    grid-column: 3 / span 5;
+    width: 100%;
+}
+.projectWrapper {
+    line-height: 25px;
+    max-width: 300px;
+    grid-column: span 4;
+}
+.projectWrapper h3, .projectLink {
+    text-align: center;
+}
+
+.projectWrapper * {
+    padding: 5px;
+}
+#workHistory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#workWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 500px;
+}
+.companyName {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.companyTitle {
+    margin-left: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+#workWrapper ul {
+    margin-left: 75px;
+}
+#workWrapper li {
+    padding: 5px;
+}
+footer {
+    background-color: var(--secondary);
+    color: var(--secondary-text);
+    padding: 20px;
+    text-align: center;
+}
+.socialLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.socialLinks * {
+    margin: 5px;
+}
+@keyframes iconHover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+.iconHover:hover svg {
+    animation: iconHover 500ms forwards;
+}
+svg {
+    width: 30px;
+}
+path {
+    fill: var(--accent);
+}
